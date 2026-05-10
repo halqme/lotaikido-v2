@@ -4,7 +4,7 @@
  */
 {
   "$schema": "node_modules/wrangler/config-schema.json",
-  "name": "lotaikido",
+  "name": "lotaikido-v2",
   "compatibility_date": "2026-05-09",
   "assets": {
     "not_found_handling": "404-page",
