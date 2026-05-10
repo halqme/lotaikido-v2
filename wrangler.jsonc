@@ -16,7 +16,6 @@
   "upload_source_maps": true,
   "compatibility_flags": ["nodejs_compat"],
   "route": {
-    "custom_domain": true,
     "zone_name": "0w0.foo",
     "pattern": "apps.0w0.foo/lotaikido*",
   },
