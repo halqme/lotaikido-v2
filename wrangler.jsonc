@@ -5,19 +5,24 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "lotaikido-v2",
-  "compatibility_date": "2026-05-09",
   "assets": {
     "not_found_handling": "404-page",
     "directory": "dist",
   },
   "observability": {
-    "enabled": true,
+    "enabled": false,
   },
-  "upload_source_maps": true,
+  "upload_source_maps": false,
   "compatibility_flags": ["nodejs_compat"],
-  "route": {
-    "zone_name": "0w0.foo",
-    "pattern": "apps.0w0.foo/lotaikido*",
-  },
+  "routes": [
+    {
+      "zone_name": "0w0.foo",
+      "pattern": "apps.0w0.foo/lotAikido",
+    },
+    {
+      "zone_name": "0w0.foo",
+      "pattern": "apps.0w0.foo/lotAikido/*",
+    },
+  ],
   "placement": { "mode": "smart" },
 }
