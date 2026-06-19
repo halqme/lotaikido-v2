@@ -57,7 +57,10 @@ export function useGenerator() {
     if (positive.value.length) query.positive = positive.value.join(",");
     if (negative.value.length) query.negative = negative.value.join(",");
     if (seed.value) query.seed = String(seed.value);
-    router.replace({ query });
+    router
+      .replace({ query })
+      .then(() => {})
+      .catch(() => {});
   }
 
   // --- Core generation ---

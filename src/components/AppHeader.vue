@@ -5,9 +5,9 @@ import { RouterLink } from "vue-router";
 <template>
   <header class="header">
     <div class="header-inner">
-      <RouterLink to="/" class="logo-wrap">
+      <RouterLink class="logo-wrap" to="/">
         <div class="logo-text">
-          <span class="logo-title">合気道 技ジェネレータ</span>
+          <span class="logo-title"> 合気道 技ジェネレータ </span>
         </div>
       </RouterLink>
     </div>
@@ -46,7 +46,9 @@ import { RouterLink } from "vue-router";
   font-weight: 700;
   border-radius: 4px;
   flex-shrink: 0;
-  font-family: "Noto Serif JP", serif;
+  font-family:
+    Noto Serif JP,
+    serif;
   letter-spacing: 0;
 }
 

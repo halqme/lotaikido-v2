@@ -21,34 +21,31 @@ async function handleShare() {
 <template>
   <div class="home">
     <GeneratorForm
-      :rank="gen.rank.value"
-      :filter="gen.filter.value"
       :count="gen.count.value"
-      :sort-enabled="gen.sortEnabled.value"
-      :rank-options="gen.rankOptions"
+      :filter="gen.filter.value"
       :filter-options="gen.filterOptions"
-      @update:rank="gen.rank.value = $event"
-      @update:filter="gen.filter.value = $event"
-      @update:count="gen.count.value = $event"
-      @update:sort-enabled="gen.sortEnabled.value = $event"
+      :rank="gen.rank.value"
+      :rank-options="gen.rankOptions"
+      :sort-enabled="gen.sortEnabled.value"
       @shuffle="gen.shuffle()"
+      @update:count="gen.count.value = $event"
+      @update:filter="gen.filter.value = $event"
+      @update:rank="gen.rank.value = $event"
+      @update:sort-enabled="gen.sortEnabled.value = $event"
     />
-
     <TagInput
-      :model-value="gen.positive.value"
-      type="positive"
       placeholder="包含する技名を入力"
+      type="positive"
+      :model-value="gen.positive.value"
       @update:model-value="gen.positive.value = $event"
     />
     <TagInput
-      :model-value="gen.negative.value"
-      type="negative"
       placeholder="除外する技名を入力"
+      type="negative"
+      :model-value="gen.negative.value"
       @update:model-value="gen.negative.value = $event"
     />
-
     <TechniqueTable :techniques="gen.techniques.value" />
-
     <div class="share-row">
       <button class="btn-share" :class="{ copied }" @click="handleShare">
         {{ copied ? "✓ URLコピー完了" : "🔗 このリストを共有" }}

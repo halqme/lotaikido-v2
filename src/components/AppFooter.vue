@@ -6,11 +6,11 @@ import { RouterLink } from "vue-router";
   <footer class="footer">
     <p>
       &copy; 2026
-      <a href="https://github.com/halqme/" target="_blank" rel="noopener">0w0.foo</a>
-      <span class="sep">|</span>
-      <RouterLink to="/eula">利用規約</RouterLink>
-      <span class="sep">|</span>
-      <a href="https://github.com/halqme/lotaikido-v2" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://github.com/halqme/" rel="noopener" target="_blank"> 0w0.foo </a>
+      <span class="sep"> | </span>
+      <RouterLink to="/eula"> 利用規約 </RouterLink>
+      <span class="sep"> | </span>
+      <a href="https://github.com/halqme/lotaikido-v2" rel="noopener" target="_blank"> GitHub </a>
     </p>
   </footer>
 </template>

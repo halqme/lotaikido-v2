@@ -28,12 +28,20 @@ function toRank(rank: number): string {
       </thead>
       <tbody>
         <tr v-for="(t, i) in techniques" :key="t.id">
-          <td class="td-num">{{ i + 1 }}</td>
-          <td class="td-waza">
-            <span class="w-in">{{ t.waza_in }}</span>
-            <span class="w-out">{{ t.waza_out }}</span>
+          <td class="td-num">
+            {{ i + 1 }}
           </td>
-          <td class="td-rank">{{ toRank(t.rank) }}</td>
+          <td class="td-waza">
+            <span class="w-in">
+              {{ t.waza_in }}
+            </span>
+            <span class="w-out">
+              {{ t.waza_out }}
+            </span>
+          </td>
+          <td class="td-rank">
+            {{ toRank(t.rank) }}
+          </td>
         </tr>
       </tbody>
     </table>
