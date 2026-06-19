@@ -32,11 +32,31 @@ bun install
 ### Compile and Hot-Reload for Development
 
 ```sh
-bun dev
+vp dev
 ```
 
-### Type-Check, Compile and Minify for Production
+### Daily Vue Checks
 
 ```sh
-bun run build
+vp run quality
+```
+
+This runs Vize's `fmt -> lint -> check -> build` flow against `src`.
+
+### App Build
+
+```sh
+vp run build
+```
+
+Project-specific tasks:
+
+```sh
+vp run quality    # vize ready src
+vp run build      # wrangler types -> vp build
+vp run preview    # build -> wrangler dev
+vp run deploy     # build -> wrangler deploy
+vp run type-check
+vp run vize:check
+vp run vize:ready
 ```

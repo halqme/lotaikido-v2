@@ -18,11 +18,11 @@
   "routes": [
     {
       "zone_name": "0w0.foo",
-      "pattern": "apps.0w0.foo/lotAikido",
+      "pattern": "apps.0w0.foo/lotAikido*",
     },
     {
-      "zone_name": "0w0.foo",
-      "pattern": "apps.0w0.foo/lotAikido/*",
+      "custom_domain": true,
+      "pattern": "lotAikido.0w0.foo",
     },
   ],
   "placement": { "mode": "smart" },
